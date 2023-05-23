@@ -60,7 +60,7 @@ class SvgText extends SvgOperation {
 
     final text = element.children
         .where((node) => node is XmlText || node is XmlCDATA)
-        .map((node) => node.value)
+        .map((node) => node.text)
         .join()
         .trim();
 
